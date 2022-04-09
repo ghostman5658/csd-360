@@ -1,0 +1,62 @@
+<!--
+    Kyle Gotzman
+    Bellevue University
+    CSD 360 Interactive Dev with JavaScr
+    Week 3 Module 4
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Gotzman CSD 360 Module 4</title>
+    <link rel="stylesheet" type="text/css" href="site.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        var i = 842;
+        let example1 = (i + i % 3 / 7 - 2 + 7 ** 3);
+        let example2 = ((i + i) % 3 / 7 - 2 + 7 ** 3); 
+        let example3 = (i + i % 3 / (7 - 2) + 7 ** 3); 
+        let example4 = (i + i % 3 / (7 - 2 + 7) ** 3); 
+        let example5 = (i + i % 3 / 7 - (2 + 7) ** 3); 
+        let example6 = ((i + i) % 3 / (7 - 2) + 7 ** 3); 
+        let example7 = (i + (i % 3) / (7 - (2 + 7)) ** 3); 
+    </script>
+</head>
+
+<body>
+   <h1 id="title">Order of Operations Using Parenthesis</h1>
+   <h2>When variable i = 842</h2>
+
+   <p>Example 1: (i + i % 3 / 7 - 2 + 7 ** 3) =<span id="example1">____1____</span></p>
+   <p><button type="button" onclick="document.getElementById('example1').innerHTML = example1">Answer</button></p>
+   <br />
+
+   <p>Example 2: ((i + i) % 3 / 7 - 2 + 7 ** 3) =<span id="example2">____2____</span></p> 
+   <p><button type="button" onclick="document.getElementById('example2').innerHTML = example2">Answer</button></p>
+   <br />
+
+   <p>Example 3: (i + i % 3 / (7 - 2) + 7 ** 3) =<span id="example3">____3____</span></p>   
+   <p><button type="button" onclick="document.getElementById('example3').innerHTML = example3">Answer</button></p>
+   <br />
+
+   <p>Example 4: (i + i % 3 / (7 - 2 + 7) ** 3) =<span id="example4">____4____</span></p>
+   <p><button type="button" onclick="document.getElementById('example4').innerHTML = example4">Answer</button></p>
+   <br />
+
+   <p>Example 5: (i + i % 3 / 7 - (2 + 7) ** 3) =<span id="example5">____5____</span></p>
+   <p><button type="button" onclick="document.getElementById('example5').innerHTML = example5">Answer</button></p>
+   <br />
+
+   <p>Example 6: ((i + i) % 3 / (7 - 2) + 7 ** 3) =<span id="example6">____6____</span></p>
+   <p><button type="button" onclick="document.getElementById('example6').innerHTML = example6">Answer</button></p>
+   <br />
+
+   <p>Example 7: (i + (i % 3) / (7 - (2 + 7)) ** 3) =<span id="example7">____7____</span></p>
+   <p><button type="button" onclick="document.getElementById('example7').innerHTML = example7">Answer</button></p>
+   <br />
+   <p>
+    <a href="index.html">Back</a>
+   </p>
+</body>
+</html>
