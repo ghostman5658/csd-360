@@ -1,0 +1,93 @@
+<!--
+    Kyle Gotzman
+    Bellevue University
+    CSD 360 Interactive Dev with JavaScr
+    Week 8 Module 10
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Gotzman CSD 360 Module 10</title>
+    <link rel="stylesheet" type="text/css" href="site.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+   <h1 id="title">Changing HTML Elements Using JavaScript</h1>
+   <br>
+   <h1 id="sub-title">Choose A Door To Reveal A Prize!</h1>
+   <div id="image-gallery">
+       <div>
+           <div>
+               <a href=#
+               onmouseover="door1.src='/img/open-door.jpg';"
+               onmouseout="door1.src='/img/red-door.jpg';"
+               >
+               <img id="pic1" name="door1" src="/img/red-door.jpg" width="200" height="300">
+               </a>
+           </div>
+           <p class="bt">
+               <input type="button" onclick="goat(door1)" value="Reveal Prize">
+           </p>
+       </div>
+
+       <div>
+           <div>
+               <a href=#
+               onmouseover="door2.src='/img/open-door.jpg';"
+               onmouseout="door2.src='/img/red-door.jpg';"
+               >
+               <img id="pic2" name="door2" src="/img/red-door.jpg" width="200" height="300">
+               </a>
+            </div>
+            <p class="bt">
+                <input type="button" onclick="goat(door2)" value="Reveal Prize">
+            </p>
+        </div>
+
+        <div>
+            <div>
+                <a href=#
+                onmouseover="door3.src='/img/open-door.jpg';"
+                onmouseout="door3.src='/img/red-door.jpg';"
+                >
+                <img id="pic3" name="door3" src="/img/red-door.jpg" width="200" height="300">
+                </a>
+            </div>
+            <p class="bt">
+                <input type="button" onclick="money(door3)" value="Reveal Prize">
+            </p>
+        </div>
+
+        <p id="prize"></p>
+   </div>
+
+
+   <br />
+
+    <script type="text/javascript">
+        function goat(obj) {
+            obj.src="/img/goat.jpg";
+            document.getElementById('prize').innerHTML= "You Won A Goat!";
+            document.getElementById('prize').style.color = "red";
+        }
+
+        function money(obj) {
+            obj.src="/img/money.jpg";
+            var display = document.getElementById('prize');
+            display.innerHTML = "You Won $120,000!"
+            display.style.color = "green";
+            display.style.fontStyle = "bold";
+        }
+       
+    </script>
+
+   <p>
+    <a href="index.html">Back</a>
+   </p>
+   
+</body>
+</html>
