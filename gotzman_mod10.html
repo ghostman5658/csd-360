@@ -30,7 +30,7 @@
                </a>
            </div>
            <p class="bt">
-               <input type="button" onclick="goat(door1)" value="Reveal Prize">
+               <input type="button" onclick="change('pic1')" value="Reveal Prize">
            </p>
        </div>
 
@@ -44,7 +44,7 @@
                </a>
             </div>
             <p class="bt">
-                <input type="button" onclick="goat(door2)" value="Reveal Prize">
+                <input type="button" onclick="change('pic2')" value="Reveal Prize">
             </p>
         </div>
 
@@ -58,7 +58,7 @@
                 </a>
             </div>
             <p class="bt">
-                <input type="button" onclick="money(door3)" value="Reveal Prize">
+                <input type="button" onclick="change('pic3')" value="Reveal Prize">
             </p>
         </div>
 
@@ -69,20 +69,26 @@
    <br />
 
     <script type="text/javascript">
-        function goat(obj) {
-            obj.src="/img/goat.jpg";
-            document.getElementById('prize').innerHTML= "You Won A Goat!";
-            document.getElementById('prize').style.color = "red";
+        function change(obj) {
+            var image = document.getElementById(obj);
+            if (obj == "pic1") {
+                image.src = "img/goat.jpg";
+                document.getElementById('prize').innerHTML= "You Won A Goat!";
+                document.getElementById('prize').style.color = "red";
+            }
+            else if (obj == "pic2") {
+                image.src = "img/goat.jpg";
+                document.getElementById('prize').innerHTML= "You Won A Goat!";
+                document.getElementById('prize').style.color = "red";
+            }
+            else if (obj == "pic3") {
+                image.src = "img/money.jpg";
+                var display = document.getElementById('prize');
+                display.innerHTML = "You Won $120,000!";
+                display.style.color = "green";
+                display.style.fontStyle = "bold";
+            } 
         }
-
-        function money(obj) {
-            obj.src="/img/money.jpg";
-            var display = document.getElementById('prize');
-            display.innerHTML = "You Won $120,000!"
-            display.style.color = "green";
-            display.style.fontStyle = "bold";
-        }
-       
     </script>
 
    <p>
